@@ -11,11 +11,6 @@ public class EnemyOnClick : MonoBehaviour
         tra = GetComponent<Transform>();
     }
 
-    void Update()
-    {
-     
-    }
-
     private void OnMouseDown()
     {
         Destroy(this.gameObject);

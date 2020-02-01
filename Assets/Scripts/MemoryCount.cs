@@ -5,23 +5,15 @@ using UnityEngine;
 public class MemoryCount : MonoBehaviour
 {
     public int memories;
-    
-    void Start()
-    {
-        
-    }
+    public static MemoryCount instance;
 
-    
-    void Update()
+    private void Awake()
     {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            AddMemory();
-        }
+        instance = this;
     }
 
     public void AddMemory()
     {
-        memories = memories + 1;
+        memories ++;
     }
 }
