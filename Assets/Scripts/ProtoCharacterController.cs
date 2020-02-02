@@ -5,8 +5,8 @@ using UnityEngine;
 public class ProtoCharacterController : MonoBehaviour
 {
 
+  //  [SerializeField] private CameraController camera;
     public float speed;
-
     private Rigidbody2D rb;
     private Vector2 moveVelocity;
 
@@ -14,9 +14,10 @@ public class ProtoCharacterController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+    //    this.camera = gameObject.GetComponent<CameraController>();
     }
 
- 
+
     void Update()
     {
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
@@ -27,4 +28,19 @@ public class ProtoCharacterController : MonoBehaviour
     {
         rb.MovePosition(rb.position + moveVelocity * Time.deltaTime);
     }
+
+
+    /*private void OnTriggerEnter(Collider other)
+    {
+        EnemyMovement enemyMovement = other.GetComponent<EnemyMovement>();
+
+        if (enemyMovement != null)
+        {
+            this.camera.Zoom();
+        }
+        else
+        {
+            Debug.LogError("ProtoCharacter not found at all");
+        }
+    }*/
 }

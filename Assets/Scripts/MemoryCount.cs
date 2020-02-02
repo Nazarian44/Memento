@@ -12,6 +12,11 @@ public class MemoryCount : MonoBehaviour
         instance = this;
     }
 
+    private void Start()
+    {
+        memories = 3;
+    }
+
     public void AddMemory()
     {
         memories ++;

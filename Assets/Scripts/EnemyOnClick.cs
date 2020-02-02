@@ -14,6 +14,6 @@ public class EnemyOnClick : MonoBehaviour
     private void OnMouseDown()
     {
         Destroy(this.gameObject);
-        //tra.localScale = new Vector2(2, 2);
+        tra.localScale = new Vector2(2, 2);
     }
 }
